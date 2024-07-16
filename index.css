@@ -1,0 +1,291 @@
+/* Reset CSS */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    color: #444;
+}
+
+.section__inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Main Header */
+.main-header {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.main-header .section__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+}
+
+.logo-docplanner {
+    height: 50px;
+}
+
+.hamburger {
+    display: none;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.hamburger-box {
+    width: 24px;
+    height: 20px;
+    display: inline-block;
+    position: relative;
+}
+
+.hamburger-inner {
+    width: 24px;
+    height: 2px;
+    background-color: #444;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.main-nav {
+    display: flex;
+    align-items: center;
+}
+
+.main-menu {
+    list-style-type: none;
+    display: flex;
+}
+
+.main-menu li {
+    margin-right: 20px;
+}
+
+.main-menu li a {
+    color: #444;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 10px;
+    transition: color 0.3s;
+}
+
+.main-menu li a:hover {
+    color: #00BFFF;
+}
+
+.main-menu li.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+}
+
+.dropdown-content ul {
+    list-style-type: none;
+    padding: 10px;
+}
+
+.dropdown-content ul li {
+    margin-bottom: 8px;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Lead Section */
+.lead {
+   
+    color: #070707;
+    padding: 80px 0;
+    text-align: center;
+}
+
+.lead__logo {
+    max-width: 150px;
+    margin-bottom: 30px;
+}
+
+.lead h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.lead p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+/* Services Section */
+.services {
+    background-color: #f9f9f9;
+    padding: 80px 0;
+}
+
+.grid {
+    display: flex;
+    justify-content: space-between;
+}
+
+.col-3 {
+    flex-basis: 30%;
+}
+
+.services__item {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.services__item img {
+    max-width: 80px;
+    margin-bottom: 20px;
+}
+
+.services__item h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.services__item h2 {
+    font-size: 16px;
+    font-weight: normal;
+    color: #777;
+    line-height: 1.5;
+}
+
+.style-select {
+    margin-top: 20px;
+}
+
+.style-select select {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+}
+
+/* Footer Section */
+.main-footer {
+    background-color: #00BFFF;
+    color: #fff;
+    padding: 30px 0;
+    text-align: center;
+}
+
+.main-footer nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.main-footer nav ul li {
+    margin-right: 20px;
+}
+
+.main-footer nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.main-footer nav ul li a:hover {
+    color: #f0f0f0;
+}
+
+.main-footer p {
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .main-header .section__inner {
+        flex-direction: column;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .main-nav {
+        display: none;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: #fff;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .main-nav.open {
+        display: flex;
+    }
+
+    .main-menu {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+    }
+
+    .main-menu li {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+
+    .dropdown-content {
+        position: static;
+        box-shadow: none;
+        display: none;
+        padding-left: 20px;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+
+    .services .grid {
+        flex-direction: column;
+    }
+
+    .col-3 {
+        flex-basis: 100%;
+        margin-bottom: 30px;
+    }
+
+    .services__item h1 {
+        font-size: 20px;
+    }
+
+    .services__item h2 {
+        font-size: 14px;
+    }
+}
